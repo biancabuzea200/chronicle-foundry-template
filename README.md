@@ -1,1 +1,0 @@
-# chronicle-foundry--template
