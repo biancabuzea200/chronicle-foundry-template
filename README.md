@@ -5,8 +5,8 @@ The Chronicle Foundry Template enables users to seamlessly integrate Chronicle o
 
 ### Foundry Installation
 
-    **Note**
-    If you are starting a new Foundry project, you might want to check out the [Foundry Installation](https://book.getfoundry.sh/getting-started/installation) and Foundry [Getting Started](https://book.getfoundry.sh/getting-started/first-steps) docs first.
+**Note**
+ If you are starting a new Foundry project, you might want to check out the [Foundry Installation](https://book.getfoundry.sh/getting-started/installation) and Foundry [Getting Started](https://book.getfoundry.sh/getting-started/first-steps) docs first.
 
 
 
