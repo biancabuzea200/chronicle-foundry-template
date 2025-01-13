@@ -1,7 +1,16 @@
 ## Chronicle Foundry Template
 
+The Chronicle Foundry Template enables users to seamlessly integrate Chronicle oracles in their Foundry-based projects. 
 
-### Set upyour environment variables
+
+### Foundry Installation
+
+    **Note**
+    If you are starting a new Foundry project, you might want to check out the [Foundry Installation](https://book.getfoundry.sh/getting-started/installation) and Foundry [Getting Started](https://book.getfoundry.sh/getting-started/first-steps) docs first.
+
+
+
+### Set up your environment variables
 
 Based on the env.example - create or update an .env file in the root directory of your project. 
 Below you can find each env variable explained:
