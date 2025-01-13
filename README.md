@@ -1,25 +1,29 @@
-## Foundry
+## Chronicle Foundry Template
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-Foundry consists of:
+### Set upyour environment variables
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Based on the env.example - create or update an .env file in the root directory of your project. 
+Below you can find each env variable explained:
 
-## Documentation
+    SEPOLIA_RPC_URL - RPC node http endpoint used by Forge
+    PRIVATE_KEY - private key of an account used for deployment and interaction with the smart contracts. When using Anvil, a set of private keys for local usage is provided. Use one of these for local development.
+    ETHERSCAN_API_KEY - API key for Etherscan, used for contract verification
 
-https://book.getfoundry.sh/
 
-## Usage
+## Export the environment variables
 
-### Build
+```shell
+$ source .env 
+```
+
+
+## Build the projects's smart contracts
 
 ```shell
 $ forge build
 ```
+
 
 ### Test
 
@@ -45,11 +49,6 @@ $ forge snapshot
 ```shell
 $ anvil
 ```
-
-
-
-
-
 
 
 ### Deploy
