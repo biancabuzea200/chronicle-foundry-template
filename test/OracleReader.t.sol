@@ -10,11 +10,11 @@ contract OracleReaderTest is Test {
     function setUp() public {
         oracle = new OracleReader();
     }
-
+    uint public constant price_ETH_atBlock_7484876 = 3023816766700000000000;
     function test_read() public view {
         uint a;
         uint b;
         (a, b) = oracle.read();
-        assertEq(a, 3023816766700000000000);
+        assertEq(a, price_ETH_atBlock_7484876);
     }
 }
