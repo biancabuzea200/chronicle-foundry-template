@@ -6,6 +6,7 @@ The Chronicle Foundry Template enables users to seamlessly integrate Chronicle o
 ### Foundry Installation
 
 **Note**
+
  If you are starting a new Foundry project, you might want to check out the [Foundry Installation](https://book.getfoundry.sh/getting-started/installation) and Foundry [Getting Started](https://book.getfoundry.sh/getting-started/first-steps) docs first.
 
 
@@ -15,12 +16,11 @@ The Chronicle Foundry Template enables users to seamlessly integrate Chronicle o
 Based on the env.example - create or update an .env file in the root directory of your project. 
 Below you can find each env variable explained:
 
-    SEPOLIA_RPC_URL - RPC node http endpoint used by Forge
+    SEPOLIA_RPC_URL - http RPC node endpoint used by Forge.
     PRIVATE_KEY - private key of an account used for deployment and interaction with the smart contracts. When using Anvil, a set of private keys for local usage is provided. Use one of these for local development.
-    ETHERSCAN_API_KEY - API key for Etherscan, used for contract verification
+    ETHERSCAN_API_KEY - API key for Etherscan, used for contract verification.
 
-
-## Export the environment variables
+## Load the environment variables from .env file
 
 ```shell
 $ source .env 
@@ -62,7 +62,15 @@ $ anvil
 
 ### Deploy
 
+Note:
+If you are running a new deploy, run before deploy:
+
+$ forge clean
+
+
+
 ```shell
+
 $ forge create --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY src/OracleReader.sol:OracleReader
 
 
