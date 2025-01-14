@@ -10,18 +10,17 @@ pragma solidity ^0.8.16;
  */
 contract OracleReader {
     /**
-    * @notice The Chronicle oracle to read from.
-    * Chronicle_ETH_USD_3:0xdd6D76262Fd7BdDe428dcfCd94386EbAe0151603
-    * Network: Sepolia
-    */
-
+     * @notice The Chronicle oracle to read from.
+     * Chronicle_ETH_USD_3:0xdd6D76262Fd7BdDe428dcfCd94386EbAe0151603
+     * Network: Sepolia
+     */
     IChronicle public chronicle = IChronicle(address(0xdd6D76262Fd7BdDe428dcfCd94386EbAe0151603));
 
-    /** 
-    * @notice The SelfKisser granting access to Chronicle oracles.
-    * SelfKisser_1:0x0Dcc19657007713483A5cA76e6A7bbe5f56EA37d
-    * Network: Sepolia
-    */
+    /**
+     * @notice The SelfKisser granting access to Chronicle oracles.
+     * SelfKisser_1:0x0Dcc19657007713483A5cA76e6A7bbe5f56EA37d
+     * Network: Sepolia
+     */
     ISelfKisser public selfKisser = ISelfKisser(address(0x0Dcc19657007713483A5cA76e6A7bbe5f56EA37d));
 
     constructor() {
@@ -30,11 +29,11 @@ contract OracleReader {
         selfKisser.selfKiss(address(chronicle));
     }
 
-    /** 
-    * @notice Function to read the latest data from the Chronicle oracle.
-    * @return val The current value returned by the oracle.
-    * @return age The timestamp of the last update from the oracle.
-    */
+    /**
+     * @notice Function to read the latest data from the Chronicle oracle.
+     * @return val The current value returned by the oracle.
+     * @return age The timestamp of the last update from the oracle.
+     */
     function read() external view returns (uint256 val, uint256 age) {
         (val, age) = chronicle.readWithAge();
     }
@@ -42,19 +41,20 @@ contract OracleReader {
 
 // Copied from [chronicle-std](https://github.com/chronicleprotocol/chronicle-std/blob/main/src/IChronicle.sol).
 interface IChronicle {
-    /** 
-    * @notice Returns the oracle's current value.
-    * @dev Reverts if no value set.
-    * @return value The oracle's current value.
-    */
+    /**
+     * @notice Returns the oracle's current value.
+     * @dev Reverts if no value set.
+     * @return value The oracle's current value.
+     */
     function read() external view returns (uint256 value);
 
-    /** 
-    * @notice Returns the oracle's current value and its age.
-    * @dev Reverts if no value set.
-    * @return value The oracle's current value using 18 decimals places.
-    * @return age The value's age as a Unix Timestamp .
-    * */
+    /**
+     * @notice Returns the oracle's current value and its age.
+     * @dev Reverts if no value set.
+     * @return value The oracle's current value using 18 decimals places.
+     * @return age The value's age as a Unix Timestamp .
+     *
+     */
     function readWithAge() external view returns (uint256 value, uint256 age);
 }
 
