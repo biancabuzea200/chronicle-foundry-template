@@ -60,7 +60,7 @@ $ anvil
 ```
 
 
-### Deploy
+## Deploy
 
 Note:
 If you are running a new deploy, run before deploy:
