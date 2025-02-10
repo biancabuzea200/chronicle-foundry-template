@@ -1,7 +1,21 @@
-## Chronicle Foundry Template
+## Getting Started With Chronicle
 
-The Chronicle Foundry Template enables users to seamlessly integrate Chronicle oracles in their Foundry-based projects.
+Blockchain development can feel overwhelming, especially when dealing with integrations, data reliability, and real-time pricing. But it doesn’t have to be.
 
+At Chronicle, we make it simple. Fetching accurate prices from Mainnet is as easy as:
+
+```shell
+$ yarn run getBTCPrice
+```
+
+or if you want a particular price feed from the [dashboard](https://chroniclelabs.org/dashboard)
+
+```shell
+$ yarn run getPrice 0x_PRICE_FEED_ADDRESS
+```
+Congrats, you've done it! 
+
+Now, how about we deploy our first oracle-powered dApp?
 
 ### Foundry Installation
 
@@ -83,7 +97,7 @@ $ forge script --chain sepolia script/deploy_oracleReader.s.sol --rpc-url $SEPOL
 ### Reading your oracle
 
 ```shell
-$ cast call <your oracle address> 'read()(uint,uint)' --rpc-url $SEPOLIA_RPC_URL
+$ cast call 0x24C392CDbF32Cf911B258981a66d5541d85269ce 'read()(uint256)' --rpc-url https://eth.llamarpc.com
 ```
 
 ### Help

@@ -1,0 +1,13 @@
+{
+  "name": "chronicle-foundry-template",
+  "scripts": {
+    "getBTCPrice": "cast call 0x24C392CDbF32Cf911B258981a66d5541d85269ce 'read()(uint256)' --rpc-url https://eth.llamarpc.com",
+    "getPrice": "wrap () { cast call \"$@\" 'read()(uint256)' --rpc-url https://eth.llamarpc.com  | cat; }; wrap"
+  },
+
+  "version": "1.0.0",
+  "main": "README.md",
+  "repository": "git@github.com:chronicleprotocol/chronicle-foundry-template.git",
+  "author": "biancabuzea200 <biancabuzea200@gmail.com>",
+  "license": "MIT"
+}
