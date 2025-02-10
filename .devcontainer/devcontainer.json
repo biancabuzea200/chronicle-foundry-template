@@ -1,7 +1,8 @@
 {
     "image": "ubuntu:22.04",
       "features": {
-          }
+          },
+      "onCreateCommand": ". ./start.sh"
       }
   
        
