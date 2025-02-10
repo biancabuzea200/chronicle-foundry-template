@@ -1,10 +1,5 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "ghcr.io/foundry-rs/foundry:v1.0.0 ",
  "features": {
-        "ghcr.io/wxw-matt/devcontainer-features/command_runner:latest": {
-			"command1": "curl -L https://foundry.paradigm.xyz | bash",
-			"command2":"source /root/.bashrc",
-			"command2": "foundryup"
         }
     }
-}
