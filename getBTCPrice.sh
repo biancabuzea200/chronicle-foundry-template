@@ -1,0 +1,2 @@
+#!/bin/bash
+var=$(cast call 0x24C392CDbF32Cf911B258981a66d5541d85269ce 'read()(uint256)' --rpc-url https://eth.llamarpc.com) && match='^\S*' && [[ $var =~ $match ]] && price=$(echo ""${BASH_REMATCH[0]}"/1000000000000000000" | bc -l) && echo "BTC price is ""$price"

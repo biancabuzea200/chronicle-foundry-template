@@ -8,4 +8,5 @@
  foundryup
  sudo apt install nodejs --yes
  sudo apt install npm --yes
+ sudo apt install bc --yes
  npm install --global yarn

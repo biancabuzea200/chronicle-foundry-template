@@ -4,8 +4,8 @@ Blockchain development can feel overwhelming, especially when dealing with integ
 
 At Chronicle, we make it simple. Fetching accurate prices from Mainnet is as easy as:
 
-```shell
-$ yarn run getBTCPrice
+```
+ yarn run getBTCPrice
 ```
 
 or if you want a particular price feed from the [dashboard](https://chroniclelabs.org/dashboard)
