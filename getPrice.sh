@@ -1,0 +1,2 @@
+#!/bin/bash
+input=$1 && var=$(cast call "$input" 'read()(uint256)' --rpc-url https://eth.llamarpc.com) && match='^\S*' && [[ $var =~ $match ]] && price=$(echo ""${BASH_REMATCH[0]}"/1000000000000000000" | bc -l) && echo "Price for "$input" is ""$price"

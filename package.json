@@ -1,8 +1,8 @@
 {
   "name": "chronicle-foundry-template",
   "scripts": {
-    "getBTCPrice": "cast call 0x24C392CDbF32Cf911B258981a66d5541d85269ce 'read()(uint256)' --rpc-url https://eth.llamarpc.com",
-    "getPrice": "wrap () { cast call \"$@\" 'read()(uint256)' --rpc-url https://eth.llamarpc.com  | cat; }; wrap"
+    "getBTCPrice": "./getBTCPrice.sh",
+    "getPrice": "./getPrice.sh"
   },
 
   "version": "1.0.0",
@@ -11,3 +11,4 @@
   "author": "biancabuzea200 <biancabuzea200@gmail.com>",
   "license": "MIT"
 }
+
